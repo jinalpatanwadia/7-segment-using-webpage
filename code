@@ -71,95 +71,103 @@ void loop() {
  // Match the request
 
 if (request.indexOf("/Req=1") != -1)  {
+  digitalWrite(a, LOW);
+  digitalWrite(b, HIGH);
+  digitalWrite(c, HIGH);
+  digitalWrite(d, LOW);       //Displaying 1
+  digitalWrite(e, LOW);
+  digitalWrite(f, LOW);
+  digitalWrite(g, LOW);
+  value=1;
+}
+
+if (request.indexOf("/Req=2") != -1)  {  
+  digitalWrite(a, HIGH);
+  digitalWrite(b, HIGH);
+  digitalWrite(c, LOW);      //Displaying 2
+  digitalWrite(d, HIGH);
+  digitalWrite(e, HIGH);
+  digitalWrite(f, LOW);
+  digitalWrite(g, HIGH);
+  value=2;
+}
+
+if (request.indexOf("/Req=3") != -1)  { 
   digitalWrite(a, HIGH);
   digitalWrite(b, HIGH);
   digitalWrite(c, HIGH);
-  digitalWrite(d, HIGH);       //Displaying 1
+  digitalWrite(d, HIGH);      //Displaying 3
   digitalWrite(e, LOW);
   digitalWrite(f, LOW);
   digitalWrite(g, HIGH);
-  value=1;
-}
-if (request.indexOf("/Req=2") != -1)  {  
-  digitalWrite(a, LOW);
-  digitalWrite(b, LOW);
-  digitalWrite(c, HIGH);      //Displaying 2
-  digitalWrite(d, LOW);
-  digitalWrite(e, LOW);
-  digitalWrite(f, HIGH);
-  digitalWrite(g, LOW);
-  value=2;
-}
-if (request.indexOf("/Req=3") != -1)  { 
-  digitalWrite(a, LOW);
-  digitalWrite(b, LOW);
-  digitalWrite(c, LOW);
-  digitalWrite(d, LOW);      //Displaying 3
-  digitalWrite(e, HIGH);
-  digitalWrite(f, HIGH);
-  digitalWrite(g, LOW);
   value=3;
 }
+
 if (request.indexOf("/Req=4") != -1)  {  
-  digitalWrite(a, HIGH);
-  digitalWrite(b, LOW);
-  digitalWrite(c, LOW);
-  digitalWrite(d, HIGH);
-  digitalWrite(e, HIGH);     //Displaying 4
-  digitalWrite(f, LOW);
-  digitalWrite(g, LOW);
-  value=4;
-}
-if (request.indexOf("/Req=5") != -1)  { 
   digitalWrite(a, LOW);
   digitalWrite(b, HIGH);
-  digitalWrite(c, LOW);
+  digitalWrite(c, HIGH);
   digitalWrite(d, LOW);
-  digitalWrite(e, HIGH);     //Displaying 5
-  digitalWrite(f, LOW);
-  digitalWrite(g, LOW);
-  value=5;
-}
-if (request.indexOf("/Req=6") != -1)  {  
-  digitalWrite(a, LOW);
-  digitalWrite(b, HIGH);
-  digitalWrite(c, LOW);
-  digitalWrite(d, LOW);    //Displaying 6
-  digitalWrite(e, LOW);
-  digitalWrite(f, LOW);
-  digitalWrite(g, LOW);
-  value=6;
-}
-if (request.indexOf("/Req=7") != -1)  {  
-  digitalWrite(a, LOW);
-  digitalWrite(b, LOW);
-  digitalWrite(c, LOW);
-  digitalWrite(d, HIGH);
-  digitalWrite(e, HIGH);   //Displaying 7
+  digitalWrite(e, LOW);     //Displaying 4
   digitalWrite(f, HIGH);
   digitalWrite(g, HIGH);
+  value=4;
+}
+
+if (request.indexOf("/Req=5") != -1)  { 
+  digitalWrite(a, HIGH);
+  digitalWrite(b, LOW);
+  digitalWrite(c, HIGH);
+  digitalWrite(d, HIGH);
+  digitalWrite(e, LOW);     //Displaying 5
+  digitalWrite(f, HIGH);
+  digitalWrite(g, HIGH);
+  value=5;
+}
+
+if (request.indexOf("/Req=6") != -1)  {  
+  digitalWrite(a, HIGH);
+  digitalWrite(b, LOW);
+  digitalWrite(c, HIGH);
+  digitalWrite(d, HIGH);    //Displaying 6
+  digitalWrite(e, HIGH);
+  digitalWrite(f, HIGH);
+  digitalWrite(g, HIGH);
+  value=6;
+}
+
+if (request.indexOf("/Req=7") != -1)  {  
+  digitalWrite(a, HIGH);
+  digitalWrite(b, HIGH);
+  digitalWrite(c, HIGH);
+  digitalWrite(d, LOW);
+  digitalWrite(e, LOW);   //Displaying 7
+  digitalWrite(f, LOW);
+  digitalWrite(g, LOW);
   value=7;
 }
+
 if (request.indexOf("/Req=8") != -1)  { 
-  digitalWrite(a, LOW );
-  digitalWrite(b, LOW);
-  digitalWrite(c, LOW);
-  digitalWrite(d, LOW);
-  digitalWrite(e, LOW);     //Displaying 8
-  digitalWrite(f, LOW);
-  digitalWrite(g, LOW);
+  digitalWrite(a, HIGH);
+  digitalWrite(b, HIGH);
+  digitalWrite(c, HIGH);
+  digitalWrite(d, HIGH);
+  digitalWrite(e, HIGH);     //Displaying 8
+  digitalWrite(f, HIGH);
+  digitalWrite(g, HIGH);
   value=8;
 }
+
 if (request.indexOf("/Req=9") != -1)  {  
-  digitalWrite(a, LOW);
-  digitalWrite(b, LOW);
-  digitalWrite(c, LOW);
-  digitalWrite(d, HIGH);
-  digitalWrite(e, HIGH);    //Displaying 9
-  digitalWrite(f, LOW);
-  digitalWrite(g, LOW);
+  digitalWrite(a, HIGH);
+  digitalWrite(b, HIGH);
+  digitalWrite(c, HIGH);
+  digitalWrite(d, LOW);
+  digitalWrite(e, LOW);    //Displaying 9
+  digitalWrite(f, HIGH);
+  digitalWrite(g, HIGH);
   value=9;
-}  
+}
 
   // Return the response
   client.println("HTTP/1.1 200 OK");
